@@ -109,7 +109,7 @@ export const init = settings => {
   settings.element.content = document.createElement('div')
   settings.element.content.contentEditable = true
   settings.element.content.className = settings.classes.content
-  settings.element.content.oninput = event => settings.onChange(event.target.innerHTML)
+  settings.element.content.oninput = event => settings.onChange(event.target.innerHTML, event)
   settings.element.content.onkeydown = preventTab
   settings.element.appendChild(settings.element.content)
 
