@@ -143,7 +143,7 @@ var init = function init(settings) {
   settings.element.content.contentEditable = true;
   settings.element.content.className = settings.classes.content;
   settings.element.content.oninput = function (event) {
-    return settings.onChange(event.target.innerHTML);
+    return settings.onChange(event.target.innerHTML, event);
   };
   settings.element.content.onkeydown = preventTab;
   settings.element.appendChild(settings.element.content);
